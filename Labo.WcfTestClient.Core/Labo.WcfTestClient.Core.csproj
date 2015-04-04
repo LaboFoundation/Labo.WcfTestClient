@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{941EBE18-9F8B-479D-88D9-00B714A3B1B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Labo.WcfTestClient.Core</RootNamespace>
+    <AssemblyName>Labo.WcfTestClient.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProxyGeneration\CSharpCodeDomProviderFactory.cs" />
+    <Compile Include="ProxyGeneration\ICodeDomProviderFactory.cs" />
+    <Compile Include="ProxyGeneration\IServiceClientProxyCompiler.cs" />
+    <Compile Include="ProxyGeneration\IServiceClientProxyFactoryGenerator.cs" />
+    <Compile Include="ProxyGeneration\IServiceMetadataDownloader.cs" />
+    <Compile Include="ProxyGeneration\IServiceMetadataImporter.cs" />
+    <Compile Include="ProxyGeneration\MetadataImporterSerializerFormatMode.cs" />
+    <Compile Include="ProxyGeneration\ServiceClientProxy.cs" />
+    <Compile Include="ProxyGeneration\ServiceClientProxyFactory.cs" />
+    <Compile Include="ProxyGeneration\ServiceClientProxyCompiler.cs" />
+    <Compile Include="ProxyGeneration\ServiceClientProxyCompileResult.cs" />
+    <Compile Include="ProxyGeneration\ServiceClientProxyFactoryGenerator.cs" />
+    <Compile Include="ProxyGeneration\ServiceMetadataInformation.cs" />
+    <Compile Include="ProxyGeneration\ServiceMetadataDownloader.cs" />
+    <Compile Include="ProxyGeneration\ServiceMetadataImporter.cs" />
+    <Compile Include="Utils\Conversion\ConversionUtils.cs" />
+    <Compile Include="Utils\Conversion\Exceptions\ConversionException.cs" />
+    <Compile Include="Utils\EnumUtils.cs" />
+    <Compile Include="Utils\Exceptions\EnumUtilsException.cs" />
+    <Compile Include="Utils\Reflection\Class.cs" />
+    <Compile Include="Utils\Reflection\Constants.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodCompiler.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodCompilerCache.cs" />
+    <Compile Include="Utils\Reflection\DynamicMethodHelper.cs" />
+    <Compile Include="Utils\Reflection\Exceptions\DynamicMethodCompilerException.cs" />
+    <Compile Include="Utils\Reflection\Exceptions\ReflectionUtilsException.cs" />
+    <Compile Include="Utils\Reflection\Instance.cs" />
+    <Compile Include="Utils\Reflection\Member.cs" />
+    <Compile Include="Utils\Reflection\Method.cs" />
+    <Compile Include="Utils\Reflection\Parameter.cs" />
+    <Compile Include="Utils\Reflection\Property.cs" />
+    <Compile Include="Utils\Reflection\PropertyAccessItem.cs" />
+    <Compile Include="Utils\Reflection\ReflectionUtils.cs" />
+    <Compile Include="Utils\TypeUtils.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
